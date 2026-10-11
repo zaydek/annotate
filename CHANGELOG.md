@@ -1,9 +1,15 @@
 # Changelog
 
-## Coming next in 1.1.9
+## Coming next in 1.1.10
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.9 — 2026-10-11 3:27 AM (PT)
+
+- **Improvement:** Send turns to Sent with a check, so you know your note reached Claude Code.
+- **Fix:** Pressing Send again on a note already sent sends nothing; the button shakes instead.
+- **Feature:** Install Annotate in Claude Code with one line from the website, then press Allow.
 
 ## 1.1.8 — 2026-10-11 3:08 AM (PT)
 
