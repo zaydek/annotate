@@ -7,6 +7,11 @@
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
 
+## 1.1.0 — 2026-10-11 12:43 AM (PT)
+
+- **Feature:** Search and filter your frames in the side panel, and act on several at once.
+- **Feature:** A soft sound confirms your note was sent; you can turn it off in Settings.
+
 ## 1.0.27 — 2026-10-11 12:40 AM (PT)
 
 - **Fix:** ⇧⌘F no longer opens the side panel, so the page stays still while you frame.
