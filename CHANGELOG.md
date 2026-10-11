@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.17
+## Coming next in 1.1.18
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.17 — 2026-10-11 4:33 PM (PT)
+
+- **Feature:** Paste a copied picture, video or file into the frame card to attach it.
 
 ## 1.1.16 — 2026-10-11 4:21 PM (PT)
 
