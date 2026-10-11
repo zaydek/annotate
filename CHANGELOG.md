@@ -1,8 +1,13 @@
 # Changelog
 
-## Coming next in 1.1.16
+## Coming next in 1.1.17
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.16 — 2026-10-11 4:21 PM (PT)
+
+- **Improvement:** The Send button now says where your frame goes, with that app's logo.
+- **Feature:** Send a frame straight to Codex from the Send menu.
 
 ## 1.1.15 — 2026-10-11 4:12 PM (PT)
 
