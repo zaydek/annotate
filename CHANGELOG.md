@@ -9,7 +9,7 @@ What changed for you, newest first.
 ## 0.9.94 · 2026-10-10
 
 - Feature: The side panel shows a green check and a one-line summary when each fix is done.
-- Feature: Press ⌥⌘↩ to save requests while Claude is busy, then send them together.
+- Feature: Press ⌥⌘↩︎ to save requests while Claude is busy, then send them together.
 
 ## 0.9.93 · 2026-10-10
 

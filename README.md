@@ -1,7 +1,7 @@
 # Annotate
 
 Annotate lets you point at anything on a web page, write a note, and have Claude Code fix it. Press ⇧⌘F, drag a
-frame around what you mean, type what you want, press ⌘↩. Claude Code gets a picture of that part with your note,
+frame around what you mean, type what you want, press ⌘↩︎. Claude Code gets a picture of that part with your note,
 does it, and tells you in one line what it changed.
 
 This repo holds the docs: how to install Annotate, use it and fix it. You can also point your own Claude Code at this
@@ -35,7 +35,7 @@ That's it. In Claude Code, `/mcp` lists **annotate** as connected.
 ## Your first five minutes
 
 1. **Frame something.** On any web page, press ⇧⌘F and drag a box around the part you mean.
-2. **Say what you want.** Type a note in the card under the frame, then press ⌘↩. The frame stays, so you can send
+2. **Say what you want.** Type a note in the card under the frame, then press ⌘↩︎. The frame stays, so you can send
    another note about the same spot.
 3. **Let Claude take it.** In Claude Code, say "take the next Annotate frame". Claude gets your picture and note, makes
    the change, and marks it done with one line.
@@ -44,7 +44,7 @@ That's it. In Claude Code, `/mcp` lists **annotate** as connected.
 5. **Show more than a picture.** With a frame up, ⇧⌘K adds a screenshot of it and ⇧⌘G records it; press ⇧⌘G again
    to stop. Drop files on the card too, up to five.
 
-Press ⌥⌘↩ instead of ⌘↩ to queue a frame, then send the whole queue from the side panel when you're ready.
+Press ⌥⌘↩︎ instead of ⌘↩︎ to queue a frame, then send the whole queue from the side panel when you're ready.
 
 ## Free to start
 
@@ -68,7 +68,7 @@ The extension updates itself through Chrome. [CHANGELOG.md](CHANGELOG.md) lists 
 What leaves your computer, and where it goes:
 
 - **A frame you send:** its note, the page's address and title, the framed picture and anything you attached go to
-  Annotate's server, so Claude Code can fetch them. Nothing is sent until you press ⌘↩ or ⌥⌘↩.
+  Annotate's server, so Claude Code can fetch them. Nothing is sent until you press ⌘↩︎ or ⌥⌘↩︎.
 - **Claude Code:** reads your frames only through the connection you allowed. You can end it any time with
   `claude mcp logout annotate`.
 - **Feedback:** sent only when you send it.
