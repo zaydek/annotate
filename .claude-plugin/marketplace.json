@@ -1,0 +1,15 @@
+{
+  "name": "annotate",
+  "owner": { "name": "Annotate" },
+  "metadata": { "description": "Annotate for Claude Code: frame part of a web page, write a note, and Claude Code picks it up." },
+  "plugins": [
+    {
+      "name": "annotate",
+      "source": "./plugin",
+      "description": "Connects Claude Code to Annotate. You sign in once in your browser and press Allow; no token to copy.",
+      "homepage": "https://annotate-app.fly.dev",
+      "repository": "https://github.com/zaydek/annotate-public",
+      "license": "MIT"
+    }
+  ]
+}

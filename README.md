@@ -18,19 +18,27 @@ You never handle an API key or a token: you sign in once in your browser and cli
 
 ## Install
 
-1. **Connect Claude Code.** In a terminal, in the project you want Claude to work on:
+1. **Connect Claude Code.** Paste this one line into a terminal:
+
+   ```sh
+   claude plugin install annotate --marketplace zaydek/annotate-public && claude mcp login plugin:annotate:annotate
+   ```
+
+   It installs the Annotate plugin from this repo and opens your browser on Annotate. Sign in if asked, then click
+   **Allow**. Claude Code says it's connected. Inside Claude Code, `/plugin install annotate --marketplace
+   zaydek/annotate-public` installs the same plugin, and `/mcp` signs it in.
+
+   Without the plugin, these two lines connect the same server to one project:
 
    ```sh
    claude mcp add --transport http annotate https://annotate-app.fly.dev/mcp
    claude mcp login annotate
    ```
 
-   Your browser opens on Annotate. Sign in if asked, then click **Allow**. Claude Code says it's connected.
-
 2. **Add the Chrome extension.** Add Annotate to Chrome from its page in the Chrome Web Store (linked from the
    website), then pin it so its eyes sit in your toolbar.
 
-That's it. In Claude Code, `/mcp` lists **annotate** as connected.
+That's it. In Claude Code, `/mcp` lists **annotate** as connected (`plugin:annotate:annotate` with the plugin).
 
 ## Your first five minutes
 

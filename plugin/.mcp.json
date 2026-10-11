@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "annotate": {
+      "type": "http",
+      "url": "https://annotate-app.fly.dev/mcp"
+    }
+  }
+}
