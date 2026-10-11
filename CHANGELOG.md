@@ -1,8 +1,13 @@
 # Changelog
 
-## Coming next in 1.1.18
+## Coming next in 1.1.19
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.18 — 2026-10-11 4:40 PM (PT)
+
+- **Fix:** Annotate waits to update until you finish your note, so screen capture keeps working.
+- **Fix:** An empty note on the frame card no longer shows a scrollbar.
 
 ## 1.1.17 — 2026-10-11 4:33 PM (PT)
 
