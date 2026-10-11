@@ -7,6 +7,10 @@
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
 
+## 1.0.27 — 2026-10-11 12:40 AM (PT)
+
+- **Fix:** ⇧⌘F no longer opens the side panel, so the page stays still while you frame.
+
 ## 1.0.26 — 2026-10-11 12:34 AM (PT)
 
 - **Fix:** ⇧⌘F opens Annotate's side panel again.
