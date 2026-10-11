@@ -1,9 +1,17 @@
 # Changelog
 
-## Coming next in 1.1.5
+## Coming next in 1.1.6
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.5 — 2026-10-11 2:18 AM (PT)
+
+- **Feature:** Short sounds confirm drawing, screenshots and sending; choose and preview each one in Settings.
+- **Feature:** Press the mic and speak: your words appear in your note, on any web page.
+- **Improvement:** Your side panel list now shows where each note went: sent, queued, copied or downloaded.
+- **Fix:** Pressing Send twice, or Send and Return together, now sends your frame only once.
+- **Fix:** Annotate's eyes follow your pointer across the page again, in the toolbar and the side panel.
 
 ## 1.1.4 — 2026-10-11 1:25 AM (PT)
 
