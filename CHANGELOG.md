@@ -3,7 +3,6 @@
 ## Coming next in 1.1.11
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
-- **Feature:** Install Annotate with one line from the website.
 
 ## 1.1.10 — 2026-10-11 3:52 AM (PT)
 
