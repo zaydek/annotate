@@ -1,9 +1,14 @@
 # Changelog
 
-## Coming next in 1.1.10
+## Coming next in 1.1.11
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.10 — 2026-10-11 3:52 AM (PT)
+
+- **Feature:** Your invite link opens a page that walks you through connecting Chrome and Claude Code.
+- **Feature:** The owner makes one private invite link per friend and can turn each one off.
 
 ## 1.1.9 — 2026-10-11 3:27 AM (PT)
 
