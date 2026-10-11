@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.15
+## Coming next in 1.1.16
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.15 — 2026-10-11 4:12 PM (PT)
+
+- **Improvement:** A screenshot now flashes white around the area you framed, so you see it was taken.
 
 ## 1.1.14 — 2026-10-11 3:48 PM (PT)
 
