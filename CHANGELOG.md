@@ -2,11 +2,15 @@
 
 ## Coming next
 
-- **Feature:** Annotate gets one version number, 1.1.0, shared by the extension and the service.
 - **Feature:** The side panel gets search, filters and selecting many frames at once.
 - **Feature:** Sounds when you send a frame and when Claude Code finishes it, with a switch to mute them.
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.0.26 — 2026-10-11 12:34 AM (PT)
+
+- **Fix:** ⇧⌘F opens Annotate's side panel again.
+- **Improvement:** Icons in the Send menu help you spot the choice you want at a glance.
 
 ## 1.0.25 — 2026-10-11 12:18 AM (PT)
 
@@ -24,7 +28,6 @@
 
 ## 1.0.22 — 2026-10-10 11:51 PM (PT)
 
-- **Improvement:** Each version in the changelog now shows the date it came out.
 - **Improvement:** Once you have sent a frame, Annotate opens straight to your frames.
 - **Feature:** The side panel lists every request you've sent and the change made for each.
 - **Feature:** Save requests while Claude Code is busy, then send them all at once.
