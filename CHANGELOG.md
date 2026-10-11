@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.11
+## Coming next in 1.1.12
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.11 — 2026-10-11 4:44 AM (PT)
+
+- **Fix:** Adding the extension during setup keeps you on the setup page and checks off its step.
 
 ## 1.1.10 — 2026-10-11 3:52 AM (PT)
 
