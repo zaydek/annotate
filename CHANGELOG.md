@@ -7,6 +7,8 @@
 
 ## 1.1.8 — 2026-10-11 3:08 AM (PT)
 
+- **Feature:** Pick Annotate's colors to suit your eyes, and see them change as you pick.
+
 ## 1.1.7 — 2026-10-11 2:58 AM (PT)
 
 - **Fix:** A note you send to Claude Code arrives once, even if you press Send again.
