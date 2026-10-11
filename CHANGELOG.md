@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.12
+## Coming next in 1.1.13
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.12 — 2026-10-11 12:19 PM (PT)
+
+- **Improvement:** You can now read on the privacy page exactly what Annotate counts about you.
 
 ## 1.1.11 — 2026-10-11 4:44 AM (PT)
 
