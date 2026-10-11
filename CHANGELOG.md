@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.19
+## Coming next in 1.1.20
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.19 — 2026-10-11 4:52 PM (PT)
+
+- **Fix:** Taking a screenshot no longer cuts off the small squares at your frame’s corners.
 
 ## 1.1.18 — 2026-10-11 4:40 PM (PT)
 
