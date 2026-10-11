@@ -1,9 +1,14 @@
 # Changelog
 
-## Coming next in 1.1.7
+## Coming next in 1.1.8
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.7 — 2026-10-11 2:58 AM (PT)
+
+- **Fix:** A note you send to Claude Code arrives once, even if you press Send again.
+- **Fix:** A folder's file count on its chat tile is bigger and easier to read again
 
 ## 1.1.6 — 2026-10-11 2:44 AM (PT)
 
