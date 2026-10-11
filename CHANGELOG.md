@@ -1,9 +1,11 @@
 # Changelog
 
-## Coming next in 1.1.8
+## Coming next in 1.1.9
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.8 — 2026-10-11 3:08 AM (PT)
 
 ## 1.1.7 — 2026-10-11 2:58 AM (PT)
 
