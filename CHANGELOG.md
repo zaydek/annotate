@@ -2,28 +2,54 @@
 
 What changed for you, newest first.
 
-## 0.9.95 · 2026-10-10
+Annotate is moving to one version number for the extension and the service, starting at 1.1.0. Until then each entry is listed under the extension's version.
 
-- Improvement: The website now opens on your sent requests, so you see Claude's progress first.
+## Coming next
 
-## 0.9.94 · 2026-10-10
+- **Feature:** Annotate gets one version number, 1.1.0, shared by the extension and the service.
+- **Feature:** The side panel gets search, filters and selecting many frames at once.
+- **Feature:** Sounds when you send a frame and when Claude Code finishes it, with a switch to mute them.
+- **Feature:** Change Annotate's shortcuts to keys you like.
+- **Feature:** Install Annotate with one line from the website.
 
-- Feature: The side panel shows a green check and a one-line summary when each fix is done.
-- Feature: Press ⌥⌘↩︎ to save requests while Claude is busy, then send them together.
+## 1.0.25 — 2026-10-11 12:18 AM (PT)
 
-## 0.9.93 · 2026-10-10
+- **Improvement:** When Claude Code can't do a request, the side panel says so and why.
+- **Improvement:** You can add a screenshot to your note with a click, not just ⇧⌘K.
 
-- Feature: Attach a screen recording to your note so Claude can see an animation that's wrong.
+## 1.0.24 — 2026-10-11 12:13 AM (PT)
 
-## 0.9.92 · 2026-10-10
+- **Fix:** The frame no longer blinks when you send a note.
 
-- Feature: Connect Claude Code with one sign-in and an Allow click, no token to copy.
+## 1.0.23 — 2026-10-11 12:01 AM (PT)
 
-## 0.9.91 · 2026-10-10
+- **Fix:** Annotate tells you when ⇧⌘F isn't set in Chrome and opens Chrome's shortcuts page.
+- **Feature:** Download a note with its picture and files as one ZIP.
 
-- Improvement: After you send a note, the box you drew stays, ready for another note.
-- Feature: Copy a frame's picture and note to your clipboard.
+## 1.0.22 — 2026-10-10 11:51 PM (PT)
 
-## 0.9.89 · 2026-10-10
+- **Improvement:** Each version in the changelog now shows the date it came out.
+- **Improvement:** Once you have sent a frame, Annotate opens straight to your frames.
+- **Feature:** The side panel lists every request you've sent and the change made for each.
+- **Feature:** Save requests while Claude Code is busy, then send them all at once.
 
-- Feature: Press ⇧⌘F, frame part of a page, write a note, and send it to Claude Code.
+## 1.0.21 — 2026-10-10 07:38 PM (PT)
+
+- **Feature:** Send Claude Code a short screen recording of the part of the page you boxed.
+- **Feature:** Attach up to five screenshots or files to a note.
+
+## 1.0.20 — 2026-10-10 07:11 PM (PT)
+
+- **Improvement:** Connect Claude Code with one pasted line and one Allow.
+- **Feature:** Send several notes about one box without drawing it again.
+- **Feature:** Resize the box from any side; hold ⌥ to grow it evenly.
+- **Feature:** Copy your note and a picture of the boxed area to paste anywhere.
+- **Fix:** Escape asks before throwing away a note you typed.
+
+## 1.0.19 — 2026-10-10 06:27 PM (PT)
+
+- **Fix:** Pressing Escape no longer deletes the note you were typing.
+
+## 1.0.18 — 2026-10-10 06:11 PM (PT)
+
+- **Feature:** Press ⇧⌘F, box part of a page, and send Claude Code a note about it.
