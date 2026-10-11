@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.13
+## Coming next in 1.1.14
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.13 — 2026-10-11 3:44 PM (PT)
+
+- **Fix:** A note you are writing no longer disappears when Annotate updates itself.
 
 ## 1.1.12 — 2026-10-11 12:19 PM (PT)
 
