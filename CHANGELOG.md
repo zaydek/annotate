@@ -2,8 +2,6 @@
 
 ## Coming next
 
-- **Feature:** The side panel gets search, filters and selecting many frames at once.
-- **Feature:** Sounds when you send a frame and when Claude Code finishes it, with a switch to mute them.
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
 
