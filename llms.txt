@@ -2,10 +2,10 @@
 
 > Annotate lets a person frame part of a web page in Chrome, write a note, and send it to Claude Code, which does it and marks it done with one line. It needs Google Chrome, Claude Code 2.1.296 or later and an Annotate account (invite-only for now). Connecting needs only a browser sign-in and one Allow click: never ask for, print or store a token or key.
 
-Connect with the one line, which installs the Annotate plugin from this repo and opens the browser:
+Connect with the one line, which installs the Annotate plugin from Annotate's website and opens the browser:
 
 ```sh
-claude plugin install annotate --marketplace zaydek/annotate-public && claude mcp login plugin:annotate:annotate
+claude plugin install annotate --marketplace https://annotate-app.fly.dev/plugin/marketplace.json && claude mcp login plugin:annotate:annotate
 ```
 
 Without the plugin, in the project the person wants Claude to work on:

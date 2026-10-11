@@ -21,12 +21,12 @@ You never handle an API key or a token: you sign in once in your browser and cli
 1. **Connect Claude Code.** Paste this one line into a terminal:
 
    ```sh
-   claude plugin install annotate --marketplace zaydek/annotate-public && claude mcp login plugin:annotate:annotate
+   claude plugin install annotate --marketplace https://annotate-app.fly.dev/plugin/marketplace.json && claude mcp login plugin:annotate:annotate
    ```
 
-   It installs the Annotate plugin from this repo and opens your browser on Annotate. Sign in if asked, then click
-   **Allow**. Claude Code says it's connected. Inside Claude Code, `/plugin install annotate --marketplace
-   zaydek/annotate-public` installs the same plugin, and `/mcp` signs it in.
+   It installs the Annotate plugin from Annotate's website and opens your browser on Annotate. Sign in if asked, then click
+   **Allow**. Claude Code says it's connected. The line is also on the website,
+   with Copy, and in Annotate's Settings, under MCP.
 
    Without the plugin, these two lines connect the same server to one project:
 

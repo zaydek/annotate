@@ -1,8 +1,0 @@
-{
-  "name": "annotate",
-  "description": "Connects Claude Code to Annotate. You sign in once in your browser and press Allow; no token to copy.",
-  "author": { "name": "Annotate" },
-  "homepage": "https://annotate-app.fly.dev",
-  "repository": "https://github.com/zaydek/annotate-public",
-  "license": "MIT"
-}
