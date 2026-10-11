@@ -1,9 +1,14 @@
 # Changelog
 
-## Coming next
+## Coming next in 1.1.4
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.3 — 2026-10-11 1:21 AM (PT)
+
+- **Fix:** If sending fails, your note is kept so you can send it again.
+- **Fix:** Opening the side panel no longer pops up Settings over your frames.
 
 ## 1.1.0 — 2026-10-11 12:43 AM (PT)
 
