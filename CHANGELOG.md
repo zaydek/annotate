@@ -1,9 +1,13 @@
 # Changelog
 
-## Coming next in 1.1.4
+## Coming next in 1.1.5
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.4 — 2026-10-11 1:25 AM (PT)
+
+- **Fix:** Annotate no longer updates itself under a note you are still writing.
 
 ## 1.1.3 — 2026-10-11 1:21 AM (PT)
 
