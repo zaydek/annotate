@@ -1,9 +1,14 @@
 # Changelog
 
-## Coming next in 1.1.6
+## Coming next in 1.1.7
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
 - **Feature:** Install Annotate with one line from the website.
+
+## 1.1.6 — 2026-10-11 2:44 AM (PT)
+
+- **Fix:** Sound picker and chat button labels were oversized; they now match the rest of Annotate.
+- **Fix:** Send and Copy sound pickers no longer run off the bottom of Settings; they open upward.
 
 ## 1.1.5 — 2026-10-11 2:18 AM (PT)
 
