@@ -1,9 +1,5 @@
 # Changelog
 
-What changed for you, newest first.
-
-Annotate is moving to one version number for the extension and the service, starting at 1.1.0. Until then each entry is listed under the extension's version.
-
 ## Coming next
 
 - **Feature:** Annotate gets one version number, 1.1.0, shared by the extension and the service.
@@ -33,12 +29,12 @@ Annotate is moving to one version number for the extension and the service, star
 - **Feature:** The side panel lists every request you've sent and the change made for each.
 - **Feature:** Save requests while Claude Code is busy, then send them all at once.
 
-## 1.0.21 — 2026-10-10 07:38 PM (PT)
+## 1.0.21 — 2026-10-10 7:38 PM (PT)
 
 - **Feature:** Send Claude Code a short screen recording of the part of the page you boxed.
 - **Feature:** Attach up to five screenshots or files to a note.
 
-## 1.0.20 — 2026-10-10 07:11 PM (PT)
+## 1.0.20 — 2026-10-10 7:11 PM (PT)
 
 - **Improvement:** Connect Claude Code with one pasted line and one Allow.
 - **Feature:** Send several notes about one box without drawing it again.
@@ -46,10 +42,10 @@ Annotate is moving to one version number for the extension and the service, star
 - **Feature:** Copy your note and a picture of the boxed area to paste anywhere.
 - **Fix:** Escape asks before throwing away a note you typed.
 
-## 1.0.19 — 2026-10-10 06:27 PM (PT)
+## 1.0.19 — 2026-10-10 6:27 PM (PT)
 
 - **Fix:** Pressing Escape no longer deletes the note you were typing.
 
-## 1.0.18 — 2026-10-10 06:11 PM (PT)
+## 1.0.18 — 2026-10-10 6:11 PM (PT)
 
 - **Feature:** Press ⇧⌘F, box part of a page, and send Claude Code a note about it.
