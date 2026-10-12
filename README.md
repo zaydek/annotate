@@ -72,7 +72,7 @@ Annotate is free while it's invite-only. A free allowance, with a counter showin
 
 ## Updating
 
-The extension updates itself through Chrome. [CHANGELOG.md](CHANGELOG.md) lists what changed in each version.
+The extension updates itself through Chrome.
 
 ## Troubleshooting
 
