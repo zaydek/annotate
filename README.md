@@ -35,6 +35,18 @@ You never handle an API key or a token: you sign in once in your browser and cli
    claude mcp login annotate
    ```
 
+   <!-- annotate-skill -->
+   **Add the Annotate skill.** In a terminal, run this line to add it to Claude Code and Codex:
+
+   ```sh
+   curl -fsSL --create-dirs -o ~/.claude/skills/annotate/SKILL.md https://annotate-app.fly.dev/skills/annotate/SKILL.md -o ~/.claude/skills/annotate/annotate.mjs https://annotate-app.fly.dev/skills/annotate/annotate.mjs -o ~/.codex/skills/annotate/SKILL.md https://annotate-app.fly.dev/skills/annotate/SKILL.md -o ~/.codex/skills/annotate/annotate.mjs https://annotate-app.fly.dev/skills/annotate/annotate.mjs
+   ```
+
+   Type `/annotate start` in Claude Code, or `$annotate start` in Codex, and that agent starts work on each frame you
+   send while its session is open. The side panel shows what the agent says it did. To stop, type `/annotate stop`, or
+   `$annotate stop` in Codex.
+   <!-- /annotate-skill -->
+
 2. **Add the Chrome extension.** Add Annotate to Chrome from its page in the Chrome Web Store (linked from the
    website), then pin it so its eyes sit in your toolbar.
 
