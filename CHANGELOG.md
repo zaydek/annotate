@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.24
+## Coming next in 1.1.25
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.24 — 2026-10-11 6:42 PM (PT)
+
+- **Fix:** When you're offline, pressing ⇧⌘F to frame something now tells you why instead of doing nothing.
 
 ## 1.1.23 — 2026-10-11 6:27 PM (PT)
 
