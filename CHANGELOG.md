@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.22
+## Coming next in 1.1.23
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.22 — 2026-10-11 5:44 PM (PT)
+
+- **Fix:** The dim around your frame no longer flickers when a screen capture starts or stops.
 
 ## 1.1.21 — 2026-10-11 5:40 PM (PT)
 
