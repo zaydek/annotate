@@ -1,8 +1,12 @@
 # Changelog
 
-## Coming next in 1.1.23
+## Coming next in 1.1.24
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.23 — 2026-10-11 6:27 PM (PT)
+
+- **Fix:** Annotate no longer offers to install itself when Chrome is slow to start it.
 
 ## 1.1.22 — 2026-10-11 5:44 PM (PT)
 
