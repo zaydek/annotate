@@ -1,8 +1,15 @@
 # Changelog
 
-## Coming next in 1.1.20
+## Coming next in 1.1.21
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.20 — 2026-10-11 5:33 PM (PT)
+
+- **Improvement:** Thumbnails show a small spinning ring while they load, instead of a bar.
+- **Improvement:** Opening a capture in the side panel shows just your attachments, without repeating its screenshot.
+- **Improvement:** The side panel filter shows the Claude Code and Codex logos beside their names.
+- **Improvement:** The Send button is shorter, with the logo of the app that will get your note.
 
 ## 1.1.19 — 2026-10-11 4:52 PM (PT)
 
