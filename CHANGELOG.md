@@ -1,8 +1,13 @@
 # Changelog
 
-## Coming next in 1.1.21
+## Coming next in 1.1.22
 
 - **Feature:** Change Annotate's shortcuts to keys you like.
+
+## 1.1.21 — 2026-10-11 5:40 PM (PT)
+
+- **Fix:** Opening the sidebar right after framing part of a page no longer turns Annotate off.
+- **Improvement:** Click the Annotate button in Chrome's toolbar to open the sidebar in one step.
 
 ## 1.1.20 — 2026-10-11 5:33 PM (PT)
 
