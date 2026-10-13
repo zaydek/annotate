@@ -14,7 +14,7 @@ Draw a box around anything on your screen, write a note, and Claude Code does wh
 ## Install
 
 Annotate is shared by invitation for now. The person who invites you sends two lines like these, with their own code
-in the first. Paste them into a terminal:
+in the first. Without an invite you can't install it yet. Paste them into a terminal:
 
 ```
 claude plugin marketplace add https://clawed-apps.fly.dev/p/zaydek/invite/<code>/marketplace.json
