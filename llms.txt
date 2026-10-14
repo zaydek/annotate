@@ -1,12 +1,12 @@
 # Annotate
 
-> Annotate is a desktop app, for people who use Claude Code on a Mac or on Ubuntu, that lets a person draw a frame around anything on their screen, type a note, and have the Claude Code chat they picked do what the note asks and say what it did. A separate Annotate Chrome extension does the same for web pages. Never ask for, print or store a token, key or invitation link.
+> Annotate is a desktop app, for people who use Claude Code on a Mac or on Ubuntu, that lets a person draw a frame around anything on their screen, type a note, and have the Claude Code chat they picked do what the note asks and say what it did. Never ask for, print or store a token, key or invitation link.
 
 ## Install
 
-Annotate is shared by invitation for now. To ask for one, the person joins the waitlist on Annotate's website, https://annotate-app.fly.dev, or asks someone who already uses Annotate.
+Annotate is shared by invitation for now. To get an invite, the person asks someone who already uses Annotate.
 
-It needs Claude Code (claude --version) and a Mac with Apple silicon, or Ubuntu with its standard desktop.
+It needs Claude Code (claude --version) and a Mac with Apple silicon, or Ubuntu with its standard GNOME desktop.
 
 The inviter sends two lines, pasted into a terminal one after the other:
 1. A line that adds the zaydek marketplace. Its link carries the invitation, so use the line that was sent; never invent one.
@@ -14,124 +14,87 @@ The inviter sends two lines, pasted into a terminal one after the other:
 
 Then start a new Claude Code session. On a Mac the app is Annotate in the Applications folder, so Spotlight finds it.
 
-First-run permissions. ⇧⌘F (Ctrl+Shift+F on Ubuntu) draws a frame.
-- macOS: on the first ⇧⌘F, macOS asks to let Annotate record the screen. Open System Settings, Privacy & Security, Screen & System Audio Recording, turn on Annotate, and press ⇧⌘F again. On the first mic press, click Allow for the microphone.
-- Ubuntu: click Allow on "Allow Annotate to Take Screenshots?", click Add to add Annotate's keyboard shortcuts, and on the first recording pick the screen in Share Screen and click Share. Ubuntu remembers each answer.
+First-run permissions:
+- macOS: when Annotate opens without a permission it needs, a window walks through each one, Screen Recording and the Microphone, with a button to its page in System Settings.
+- Ubuntu: click Allow when Ubuntu asks to let Annotate take screenshots, click Add to add Annotate's keyboard shortcuts, and on the first recording pick the screen in Share Screen and click Share.
 
-Speaking a note and sending feedback need an Annotate account, which is by invitation too. On the first mic press the browser opens on Annotate's website: the person signs in and clicks Allow.
+Framing needs no account. The mic and Send Feedback need the person to sign in: they choose Sign in from Annotate's menu and finish in the browser window it opens, with the invite from the person who shared Annotate.
 
 ## Use
 
-In a Claude Code chat, /annotate start makes that chat take the frames the person sends. Claude reads the picture and the note, does what the note asks, and marks the frame done, or stuck, with one line saying what it did.
+In a Claude Code chat, /annotate makes that chat take the frames the person sends. Claude reads the picture and the note, does what the note asks, and marks the frame done, or stuck, with one line saying what it did.
 
-Words: a frame is the box drawn over the screen; Annotate sends a picture of what is inside it with the note. The card is the small box beside the frame for the note, with Send, Cancel and a mic button (speak, and the words fill the note). The inbox is Annotate's window listing each frame sent, its state (working, done, stuck) and the agent's line. The menu-bar icon (Mac) or top-bar icon (Ubuntu) is Annotate's icon at the top right of the screen, with Annotate's menu.
+Words: a frame is the box drawn over the screen; Annotate sends a picture of what is inside it with the note. The card is the small box beside the frame for the note. The inbox is Annotate's window listing each frame sent, its state (waiting for a chat, working, done, stuck) and the chat's line. Annotate's menu opens from its icon at the top right of the screen, in the menu bar (Mac) or the top bar (Ubuntu).
 
 Commands, in the order /annotate help prints them:
-- /annotate: whether Annotate is running, and which chat takes the frames.
-- /annotate start: this chat takes the frames, and Annotate opens if it isn't running. Typed in another chat, the frames go there instead.
-- /annotate stop: this chat stops taking frames. Annotate keeps running.
-- /annotate open: Annotate opens. This chat takes no frames until /annotate start.
+- /annotate: this chat takes the frames. Annotate opens if it isn't open. Typed in another chat, the frames go there instead.
+- /annotate off: this chat stops taking frames. Annotate stays open.
+- /annotate open: Annotate opens. No chat takes frames until /annotate.
 - /annotate quit: Annotate closes.
-- /annotate where: every folder Annotate writes to on this computer.
-- /annotate help: every command and key.
-- /annotate forget: removes Annotate from this computer, once the person types yes. See Update and uninstall.
+- /annotate where: where the frames and settings are, and where the app is.
+- /annotate update (or upgrade): gets the newest version of Annotate.
+- /annotate help: whether Annotate is open and which chat takes the frames, then every command and key. /annotate help more adds what leaves the computer and how to use other coding tools.
+- /annotate uninstall: removes Annotate once the person says yes. See Update and uninstall.
+/annotate start and /annotate stop are the old names of /annotate and /annotate off, and still work.
 
-Keys, Mac then Linux:
+Keys, Mac then Ubuntu:
 - ⇧⌘F, Ctrl+Shift+F: draw a frame over the screen, then type a note on its card.
 - ⌘↩︎, Ctrl+Enter: send the frame and its note to the chat.
-- ⇧⌘↩︎, Ctrl+Shift+Enter: record a video of the drawn frame; press again to stop. The video goes to the chat with the frame. To add voice, press Mic in the bar shown while it records.
+- ⇧⌘↩︎, Ctrl+Shift+Enter: record a video of the drawn frame; press again to stop. The person's voice is in the recording unless Include my voice in recordings is off.
 - ⇧⌘E, Ctrl+Shift+E: show or hide the inbox.
-- Esc, Esc: close the frame without sending it.
-
-### In Chrome
-
-The Chrome extension is a separate product, for web pages only, with its own install; its /annotate start comes from the Annotate skill, not the desktop app. It needs Google Chrome on macOS, Windows or Linux, Claude Code 2.1.296 or later (claude update), and an Annotate account (by invitation). There is never a key or token to handle.
-
-1. Connect Claude Code to Annotate's server. This line installs the Claude Code plugin annotate@annotate and opens the browser; the person signs in if asked and clicks Allow:
-
-   claude plugin install annotate --marketplace https://annotate-app.fly.dev/plugin/marketplace.json && claude mcp login plugin:annotate:annotate
-
-   Without the plugin, in the one project the person wants Claude to work on:
-
-   claude mcp add --transport http annotate https://annotate-app.fly.dev/mcp
-   claude mcp login annotate
-
-2. Add the Annotate skill to Claude Code and Codex:
-
-   curl -fsSL --create-dirs -o ~/.claude/skills/annotate/SKILL.md https://annotate-app.fly.dev/skills/annotate/SKILL.md -o ~/.claude/skills/annotate/annotate.mjs https://annotate-app.fly.dev/skills/annotate/annotate.mjs -o ~/.codex/skills/annotate/SKILL.md https://annotate-app.fly.dev/skills/annotate/SKILL.md -o ~/.codex/skills/annotate/annotate.mjs https://annotate-app.fly.dev/skills/annotate/annotate.mjs
-
-3. Add Annotate to Chrome from the Chrome Web Store (linked from the website) and pin it; its toolbar icon is a pair of eyes. /mcp then lists annotate as connected.
-
-Extension keys, Mac then Windows and Linux: ⇧⌘F, Ctrl+Shift+F draw a frame; ⌘↩︎, Ctrl+Enter send; ⌥⌘↩︎, Ctrl+Alt+Enter queue (send the queue from the side panel); ⇧⌘E, Ctrl+Shift+E side panel; ⇧⌘K, Ctrl+Shift+K add one more picture of the frame; ⇧⌘G, Ctrl+Shift+G record it, again to stop. A card holds up to five pictures, videos or dropped files. The frame stays after sending, so another note can go about the same spot.
-
-To take extension frames: /annotate start (Codex: $annotate start), or "take the next Annotate frame": call frames_next, do what the note and picture ask, then frame_mark done (or stuck) with one plain sentence. /annotate stop stops it. The side panel shows each frame's sent, picked-up and done states and the agent's line. The extension is free while Annotate is invite-only.
-
-To help with the extension:
-- Run /mcp; if annotate needs authentication, run claude mcp login plugin:annotate:annotate (or claude mcp login annotate without the plugin) and click Allow again.
-- If ⇧⌘F does nothing, check Annotate is on in chrome://extensions and reload the page. Chrome's own pages can't be framed.
-- Still stuck: Feedback in the website's menu, in the person's own words: what they did, expected, and saw.
+- Esc: close the frame without sending it.
 
 ## Settings
 
-Settings… is in the menu of the menu-bar icon (Mac) or top-bar icon (Ubuntu); on a Mac also in the Annotate menu, with ⌘,.
-- Eyes follow the cursor: Annotate's character, in the menu-bar icon and the inbox, watches the pointer; off, it only blinks.
-- Sound effects: a short sound for each thing the person does.
-- Show in Dock (Mac): the icon also shows in the Dock.
-- Start on Login (Mac): Annotate opens at login.
-- Menu bar icon: the character on a tile, or alone.
-- Microphone: which microphone the mic button uses; System default unless picked.
-Speech to text is not in the Settings window. Voice goes to xAI. On a Mac, hold Option (⌥) while clicking the menu-bar icon and choose ElevenLabs under Speech to Text to use it instead. On Ubuntu voice always goes to xAI.
+Settings… is in Annotate's menu; on a Mac also in the Annotate menu, with ⌘,.
+- Include my voice in recordings: on at first; off, recordings have no sound.
+- Eyes follow the cursor: on at first. Annotate's character watches the pointer; off, it only blinks.
+- Play sound effects: on at first. A short sound for each thing the person does.
+- Show Annotate in the Dock (Mac): off at first.
+- Start on Login: off at first.
+- Menu bar icon: the character on a background, or alone.
+- Microphone: which microphone the mic uses; System default unless picked.
+The same switches are in Annotate's menu. Which service turns voice into words is not in the Settings window: on a Mac, hold Option (⌥) while opening Annotate's menu and pick xAI or ElevenLabs. On Ubuntu it is always xAI.
 
 ## Where your data lives
 
-One folder holds the frames and settings; /annotate where lists every folder.
+One folder holds the frames and settings; /annotate where names it.
 - Mac: ~/Library/Application Support/Annotate. The app is Annotate in the Applications folder.
-- Ubuntu, installed through Claude Code: ~/.claude-apps/annotate/state/userData.
-- Linux, installed some other way (not through Claude Code): ~/.config/Annotate.
+- Ubuntu, installed through Claude Code: ~/.local/share/annotate. The app is in ~/.claude-apps/annotate.
+- Linux, run some other way (not through Claude Code): ~/.config/Annotate.
+Inside it: frames.json (the inbox list), frames/ (pictures and recordings), settings.json, feedback/ (waiting until sign-in), talk-log.jsonl (how long each mic use lasted, never the words), install-id (a random number, never who the person is) and, on a Mac, annotate.log (what Annotate did, never a note). On Ubuntu installed through Claude Code that record is app.log in ~/.claude-apps/annotate. The sign-in is in the Mac's saved passwords as "Annotate desktop", or locked in the data folder on Ubuntu.
 
-What leaves the computer, desktop app:
-- The chat that ran /annotate start: frames, notes and videos stay on the computer until that chat takes them; then its AI reads them like anything else in the chat (for Claude Code, they go to Anthropic with the chat). The desktop app never sends frames to Annotate's server or to Clawed Apps.
-- Annotate's website, annotate-app.fly.dev: sign-in. Voice and feedback pass through Annotate's server; frames never do.
-- xAI, or ElevenLabs if picked: the voice, while the mic is on, through Annotate's server, to become text. Never frames, pictures, videos or typed notes.
-- Feedback: on Send, Annotate's server gets the note, the picture if added, and the Annotate version, the operating system and its version, and the processor type.
-- Clawed Apps (spelled with a w), the service that installs Annotate through Claude Code: gives the computer an install number, sees each update download and the IP address. When Claude Code opened Annotate (/annotate start or /annotate open), Annotate also sends it a short report per frame sent (how it was made: typed, spoken, recorded with a video, or drawn with no note; seconds from ⇧⌘F to sending) and per frame done or stuck (seconds from sending to the agent marking it), each with the Annotate version and a random number that is the same for every report from this computer. Never notes, pictures, videos, name or email.
-
-What leaves the computer, Chrome extension:
-- Annotate's server: on send or queue, the note, the page's address and title, the picture and attachments, so the agent can fetch them; the agent's done line goes there too, for the side panel.
-- The chat that takes the frame: the agent reads it like anything else in the chat (Anthropic for Claude Code, OpenAI for Codex). claude mcp logout plugin:annotate:annotate (or claude mcp logout annotate without the plugin) ends Claude Code's connection.
+What leaves the computer:
+- The chat that ran /annotate: frames, notes and recordings stay on the computer until that chat takes them; then its AI reads them like anything else in the chat (for Claude Code, they go to Anthropic with the chat).
+- xAI, or ElevenLabs if picked: the voice, while the mic is on, through Annotate's server, to become text. Never frames, pictures, recordings or typed notes.
+- Annotate, on Send Feedback: the note, the picture if added, and the Annotate and operating system versions. Signed out, feedback is kept on the computer until sign-in.
+- Clawed Apps (spelled with a w), the service that installs Annotate through Claude Code: gives the computer an install number and sees each update download. When Claude Code opened Annotate, Annotate also sends it a short report per frame sent (how it was made: typed, spoken, drawn or recorded) and per frame done or stuck, with how long it took and a random number that is the same for every report from this computer. Never notes, pictures, recordings, name or email.
 
 Nothing else leaves.
 
 ## Update and uninstall
 
-The desktop app updates itself when a new Claude Code session starts. The Chrome extension updates through Chrome.
+Annotate checks for a newer version when a Claude Code session starts. /annotate update gets it now; it asks first, then says when to restart Claude Code.
 
-/annotate forget, then yes:
-- Mac: removes the app; keeps the frames and settings in ~/Library/Application Support/Annotate.
-- Ubuntu, installed through Claude Code: removes the app and its data folder, with the frames and settings.
-- Linux, installed some other way: removes the app; keeps ~/.config/Annotate.
-Then claude plugin uninstall annotate@zaydek removes the /annotate command. On a Mac, delete ~/Library/Application Support/Annotate by hand to remove the frames.
+/annotate uninstall asks "Uninstall Annotate?" (Yes goes on) and then "Also delete your frames and settings?" (No keeps them). It quits Annotate, removes the app and ~/.claude-apps/annotate, deletes the data folder only on the second Yes, and removes annotate@zaydek from Claude Code. If Annotate is still open it removes nothing and says to quit Annotate from its menu first.
 
-Removing the Chrome extension: Remove it in chrome://extensions; claude plugin uninstall annotate@annotate (or claude mcp remove annotate without the plugin); delete ~/.claude/skills/annotate and ~/.codex/skills/annotate.
+By hand: run claude plugin uninstall annotate@zaydek in a terminal; on a Mac, drag Annotate from Applications to the Trash; delete the data folder above to remove the frames and settings.
 
 ## Works with
 
-- The desktop app: Claude Code in a terminal, on macOS with Apple silicon (tested on macOS 26) and Ubuntu with GNOME (tested on Ubuntu 26.04, x86_64). No Intel Mac build. Not yet tested: the Claude desktop app, Codex, OpenCode, omp (oh-my-pi) and Grok Build.
-- In Chrome (the extension): Google Chrome on macOS, Windows or Linux, with Claude Code in a terminal; Codex in a terminal, on macOS. Not yet tested: the Claude desktop app, OpenCode, omp and Grok Build.
-
-For an agent that is not Claude Code: with the desktop app running, its MCP server is at http://127.0.0.1:7420/mcp. Connect to it and call annotate_start; that chat then takes the frames, as /annotate start does in Claude Code. Not yet tested outside Claude Code.
+- Claude Code in a terminal, on macOS with Apple silicon and Ubuntu with GNOME. Tested with every release. No Intel Mac build.
+- Other coding agents, such as Codex: with Annotate open, paste "Connect to Annotate at http://127.0.0.1:7420/mcp and take my frames from it." into a chat in that tool. That chat then calls annotate_start and takes frames as /annotate does in Claude Code. Best effort, not tested with each release.
 
 ## Feedback
 
-Desktop app: Send Feedback… in the menu-bar icon's (Mac) or top-bar icon's (Ubuntu) menu. A note, optionally a picture (Frame the screen…, or one of the recent frames), then Send. It sends Annotate's server the note, the picture, the Annotate version, the operating system and its version, and the processor type; signed out, it is kept on the computer until sign-in.
-Chrome extension: Feedback in the menu on Annotate's website.
+Send Feedback… in Annotate's menu. A note, optionally a picture (Frame the screen…, or one of the person's frames), then Send. It sends Annotate the note, the picture and the Annotate and operating system versions; signed out, it is kept on the computer until sign-in.
 Issues: https://github.com/zaydek/annotate/issues (public; leave out anything private).
 
 ## Docs
 
 - [README.md](README.md): the same facts for a person.
-- [skills/annotate/SKILL.md](skills/annotate/SKILL.md): the Chrome extension's Annotate skill.
+- [skills/annotate/SKILL.md](skills/annotate/SKILL.md): the Annotate skill: starting and stopping in a chat, settings, data, updating and uninstalling.
 
 ## Optional
 
-- [LICENSE](LICENSE): MIT, for this repo only; the Annotate app, the Chrome extension and the Annotate service are not covered.
+- [LICENSE](LICENSE): MIT, for this repo only; the Annotate app and the Annotate service are not covered.
