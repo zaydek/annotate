@@ -14,10 +14,10 @@ over anything on their screen and types a note, and the chat that takes their fr
 In Claude Code with Annotate installed (`annotate@zaydek`), `/annotate` is Annotate's own command. Tell the person which
 line to type; don't run anything for it yourself.
 
-- Type `/annotate`: this chat takes your frames. Annotate opens if it isn't open.
-- Type `/annotate off`: this chat stops taking frames. Annotate stays open.
+- Type `/annotate start`: this chat takes your frames. Annotate opens if it isn't open.
+- Type `/annotate stop`: this chat stops taking frames. Annotate stays open.
 
-`/annotate start` and `/annotate stop` are their old names and still work. The newest chat to type `/annotate` takes the
+From Annotate 1.12.12, a bare `/annotate` starts too and `/annotate off` stops. The newest chat to start takes the
 frames; the chat before it is told they moved.
 
 ### In another coding agent
@@ -41,9 +41,9 @@ To stop, call `annotate_stop`. Annotate stays open.
 
 ## Commands
 
-- `/annotate`: this chat takes your frames. Annotate opens if it isn't open.
-- `/annotate off`: this chat stops taking frames. Annotate stays open.
-- `/annotate open`: Annotate opens. No chat takes frames until you type `/annotate`.
+- `/annotate start` (or `/annotate` from 1.12.12): this chat takes your frames. Annotate opens if it isn't open.
+- `/annotate stop` (or `/annotate off` from 1.12.12): this chat stops taking frames. Annotate stays open.
+- `/annotate open`: Annotate opens. No chat takes frames until you type `/annotate start`.
 - `/annotate quit`: Annotate closes.
 - `/annotate where`: where your frames and settings are, and where the app is.
 - `/annotate update` (or `/annotate upgrade`): gets the newest version of Annotate.
@@ -101,7 +101,7 @@ your Mac's saved passwords as "Annotate desktop", or locked in the data folder o
 
 ## What leaves your computer
 
-- Your frames, notes and recordings stay on this computer until the chat where you typed `/annotate` takes them. That
+- Your frames, notes and recordings stay on this computer until the chat where you typed `/annotate start` takes them. That
   chat's AI then reads them as it reads anything else you give it; for Claude Code, that is Anthropic.
 - To use the mic or Send Feedback, choose Sign in from Annotate's menu and finish in the browser window it opens, with the
   invite from the person who shared Annotate with you. Framing works without signing in.

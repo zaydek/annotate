@@ -26,9 +26,9 @@ your computer asks you to allow a few things, such as recording the screen.
 
 ## Use
 
-- Type `/annotate` in a Claude Code chat: that chat gets every box you send, with its note.
+- Type `/annotate start` in a Claude Code chat: that chat gets every box you send, with its note.
 - ⇧⌘F on a Mac, Ctrl+Shift+F on Ubuntu: draw a box over your screen and type a note. ⌘↩︎ or Ctrl+Enter sends it.
-- Type `/annotate off`: that chat stops getting your boxes. Annotate keeps running.
+- Type `/annotate stop`: that chat stops getting your boxes. Annotate keeps running.
 - Type `/annotate help`: every command and key.
 
 Everything else is in [skills/annotate/SKILL.md](skills/annotate/SKILL.md): settings, where your data lives and what
