@@ -13,15 +13,14 @@ Draw a box around anything on your screen, write a note, and Claude Code does wh
 
 ## Install
 
-Annotate is shared by invitation for now. The person who invites you sends two lines like these, with their own code
-in the first. Without an invite you can't install it yet. Paste them into a terminal:
+Paste this into a terminal:
 
 ```
-claude plugin marketplace add https://clawed-apps.fly.dev/p/zaydek/invite/<code>/marketplace.json
-claude plugin install annotate@zaydek
+curl -fsSL https://annotate.fly.dev/install.sh | sh
 ```
 
-Then start a new Claude Code session. On a Mac, Annotate goes into your Applications folder. The first time you use it,
+It asks once before it installs, then offers to sign in, which you can skip. In a Claude Code chat that was already
+open, type `/reload-plugins` once. On a Mac, Annotate goes into your Applications folder. The first time you use it,
 your computer asks you to allow a few things, such as recording the screen.
 
 ## Use

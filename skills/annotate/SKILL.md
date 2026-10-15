@@ -103,14 +103,14 @@ your Mac's saved passwords as "Annotate desktop", or locked in the data folder o
 
 - Your frames, notes and recordings stay on this computer until the chat where you typed `/annotate start` takes them. That
   chat's AI then reads them as it reads anything else you give it; for Claude Code, that is Anthropic.
-- To use the mic or Send Feedback, choose Sign in from Annotate's menu and finish in the browser window it opens, with the
-  invite from the person who shared Annotate with you. Framing works without signing in.
+- To use the mic or Send Feedback, choose Sign in from Annotate's menu and finish in the browser window it opens. Framing works
+  without signing in.
 - When you talk a note into the mic, your voice goes through Annotate's server to xAI, or to ElevenLabs if you picked it,
   to become text. Never your frames, pictures, recordings or typed notes.
 - Send Feedback sends Annotate your note, the picture if you add one, and which version of Annotate and of your operating
   system you have.
-- Clawed Apps (spelled with a w) installs Annotate through Claude Code. It gives this computer an install number and sees
-  each time Annotate downloads an update. When you opened Annotate through Claude Code, Annotate also sends Clawed Apps a
+- annotate.fly.dev installs and updates Annotate. It gives this computer an install number and sees each time Annotate
+  downloads an update. When you opened Annotate through Claude Code, Annotate also sends annotate.fly.dev a
   short report each time you send a frame and each time a chat finishes one or gets stuck on it: how you made the frame
   (typed, spoken, drawn or recorded), how long it took, and the random number for this install. A report never includes
   your notes, pictures or recordings.

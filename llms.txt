@@ -1,24 +1,19 @@
 # Annotate
 
-> Annotate is a desktop app, for people who use Claude Code on a Mac or on Ubuntu, that lets a person draw a frame around anything on their screen, type a note, and have the Claude Code chat they picked do what the note asks and say what it did. Never ask for, print or store a token, key or invitation link.
+> Annotate is a desktop app, for people who use Claude Code on a Mac or on Ubuntu, that lets a person draw a frame around anything on their screen, type a note, and have the Claude Code chat they picked do what the note asks and say what it did. Never ask for, print or store a token or key.
 
 ## Install
 
-Annotate is shared by invitation for now. To get an invite, the person asks someone who already uses Annotate.
-
 It needs Claude Code (claude --version) and a Mac with Apple silicon, or Ubuntu with its standard GNOME desktop.
 
-The inviter sends two lines, pasted into a terminal one after the other:
-1. A line that adds the zaydek marketplace. Its link carries the invitation, so use the line that was sent; never invent one.
-2. claude plugin install annotate@zaydek
-
-Then start a new Claude Code session. On a Mac the app is Annotate in the Applications folder, so Spotlight finds it.
+The person pastes one line into a terminal: curl -fsSL https://annotate.fly.dev/install.sh | sh
+It asks once before it installs, then offers to sign in, which can be skipped. In a Claude Code chat that was already open, the person types /reload-plugins once. On a Mac the app is Annotate in the Applications folder, so Spotlight finds it.
 
 First-run permissions:
 - macOS: when Annotate opens without a permission it needs, a window walks through each one, Screen Recording and the Microphone, with a button to its page in System Settings.
 - Ubuntu: click Allow when Ubuntu asks to let Annotate take screenshots, click Add to add Annotate's keyboard shortcuts, and on the first recording pick the screen in Share Screen and click Share.
 
-Framing needs no account. The mic and Send Feedback need the person to sign in: they choose Sign in from Annotate's menu and finish in the browser window it opens, with the invite from the person who shared Annotate.
+Framing needs no account. The mic and Send Feedback need the person to sign in: they choose Sign in from Annotate's menu and finish in the browser window it opens.
 
 ## Use
 
@@ -68,7 +63,7 @@ What leaves the computer:
 - The chat that ran /annotate start: frames, notes and recordings stay on the computer until that chat takes them; then its AI reads them like anything else in the chat (for Claude Code, they go to Anthropic with the chat).
 - xAI, or ElevenLabs if picked: the voice, while the mic is on, through Annotate's server, to become text. Never frames, pictures, recordings or typed notes.
 - Annotate, on Send Feedback: the note, the picture if added, and the Annotate and operating system versions. Signed out, feedback is kept on the computer until sign-in.
-- Clawed Apps (spelled with a w), the service that installs Annotate through Claude Code: gives the computer an install number and sees each update download. When Claude Code opened Annotate, Annotate also sends it a short report per frame sent (how it was made: typed, spoken, drawn or recorded) and per frame done or stuck, with how long it took and a random number that is the same for every report from this computer. Never notes, pictures, recordings, name or email.
+- annotate.fly.dev, the service that installs and updates Annotate: gives the computer an install number and sees each update download. When Claude Code opened Annotate, Annotate also sends it a short report per frame sent (how it was made: typed, spoken, drawn or recorded) and per frame done or stuck, with how long it took and a random number that is the same for every report from this computer. Never notes, pictures, recordings, name or email.
 
 Nothing else leaves.
 
