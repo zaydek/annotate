@@ -17,14 +17,14 @@ Framing needs no account. The mic and Send Feedback need the person to sign in: 
 
 ## Use
 
-In a Claude Code chat, /annotate start makes that chat take the frames the person sends. Claude reads the picture and the note, does what the note asks, and marks the frame done, or stuck, with one line saying what it did.
+In a Claude Code chat, /annotate makes that chat take the frames the person sends. Claude reads the picture and the note, does what the note asks, and marks the frame done, or stuck, with one line saying what it did.
 
-Words: a frame is the box drawn over the screen; Annotate sends a picture of what is inside it with the note. The card is the small box beside the frame for the note. The inbox is Annotate's window listing each frame sent, its state (waiting for a chat, working, done, stuck) and the chat's line. Annotate's menu opens from its icon at the top right of the screen, in the menu bar (Mac) or the top bar (Ubuntu).
+Words: a frame is the rectangle drawn over the screen; Annotate sends a picture of what is inside it with the note. The card is the small box beside the frame for the note. The inbox is Annotate's window listing each frame sent, its state (waiting for a chat, working, done, stuck) and the chat's line. Annotate's menu opens from its icon at the top right of the screen, in the menu bar (Mac) or the top bar (Ubuntu).
 
 Commands, in the order /annotate help prints them:
-- /annotate start: this chat takes the frames. Annotate opens if it isn't open. Typed in another chat, the frames go there instead.
-- /annotate stop: this chat stops taking frames. Annotate stays open.
-- /annotate open: Annotate opens. No chat takes frames until /annotate start.
+- /annotate: this chat takes the frames. Annotate opens if it isn't open. Typed in another chat, the frames go there instead.
+- /annotate off: this chat stops taking frames. Annotate stays open.
+- /annotate open: Annotate opens. No chat takes frames until /annotate.
 - /annotate quit: Annotate closes.
 - /annotate where: where the frames and settings are, and where the app is.
 - /annotate update (or upgrade): gets the newest version of Annotate.
@@ -60,7 +60,7 @@ One folder holds the frames and settings; /annotate where names it.
 Inside it: frames.json (the inbox list), frames/ (pictures and recordings), settings.json, feedback/ (waiting until sign-in), talk-log.jsonl (how long each mic use lasted, never the words), install-id (a random number, never who the person is) and, on a Mac, annotate.log (what Annotate did, never a note). On Ubuntu installed through Claude Code that record is app.log in ~/.claude-apps/annotate. The sign-in is in the Mac's saved passwords as "Annotate desktop", or locked in the data folder on Ubuntu.
 
 What leaves the computer:
-- The chat that ran /annotate start: frames, notes and recordings stay on the computer until that chat takes them; then its AI reads them like anything else in the chat (for Claude Code, they go to Anthropic with the chat).
+- The chat that ran /annotate: frames, notes and recordings stay on the computer until that chat takes them; then its AI reads them like anything else in the chat (for Claude Code, they go to Anthropic with the chat).
 - xAI, or ElevenLabs if picked: the voice, while the mic is on, through Annotate's server, to become text. Never frames, pictures, recordings or typed notes.
 - Annotate, on Send Feedback: the note, the picture if added, and the Annotate and operating system versions. Signed out, feedback is kept on the computer until sign-in.
 - annotate.fly.dev, the service that installs and updates Annotate: gives the computer an install number and sees each update download. When Claude Code opened Annotate, Annotate also sends it a short report per frame sent (how it was made: typed, spoken, drawn or recorded) and per frame done or stuck, with how long it took and a random number that is the same for every report from this computer. Never notes, pictures, recordings, name or email.
