@@ -22,7 +22,7 @@ It does not read your clipboard or your files.
 
 | What | macOS | Ubuntu |
 | --- | --- | --- |
-| Frames, notes, recordings, settings, unsent feedback, its log, and crash dumps (kept 30 days, never sent) | `~/Library/Application Support/Annotate/` | `~/.local/share/annotate/` |
+| Frames, notes, recordings, settings, unsent feedback, its log, and crash dumps (kept 30 days, never sent) | `~/Library/Application Support/Annotate/` | `~/.local/share/annotate/`, and the log in `~/.cache/annotate-desktop/` |
 | Your sign-in | Your Keychain, under "Annotate desktop" | `~/.local/share/annotate/account.sealed`, locked with your keyring when you have one |
 | The installer's sign-in, a random install id, and the crash reports it sent | The installer's hidden folder in your home directory | The installer's hidden folder in your home directory |
 

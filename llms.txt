@@ -46,23 +46,20 @@ The same switches are in Annotate's menu. Which service turns voice into words i
 
 One folder holds the frames and settings; /annotate where names it.
 - Mac: ~/Library/Application Support/Annotate. The app is Annotate in the Applications folder.
-- Ubuntu, installed through Claude Code: ~/.local/share/annotate. The app is in ~/.claude-apps/annotate.
+- Ubuntu, installed through Claude Code: ~/.local/share/annotate. The app is in the installer's hidden folder.
 - Linux, run some other way (not through Claude Code): ~/.config/Annotate.
-Inside it: frames.json (the inbox list), frames/ (pictures and recordings), settings.json, feedback/ (waiting until sign-in), talk-log.jsonl (how long each mic use lasted, never the words), install-id (a random number, never who the person is) and, on a Mac, annotate.log (what Annotate did, never a note). On Ubuntu installed through Claude Code that record is app.log in ~/.claude-apps/annotate. The sign-in is in the Mac's saved passwords as "Annotate desktop", or locked in the data folder on Ubuntu.
+Inside it: frames.json (the inbox list), frames/ (pictures and recordings), settings.json, feedback/ (waiting until sign-in), talk-log.jsonl (how long each mic use lasted, never the words), install-id (a random number, never who the person is) and, on a Mac, annotate.log (what Annotate did, never a note). On Ubuntu installed through Claude Code that record is ~/.cache/annotate-desktop/app.log. The sign-in is in the Mac's saved passwords as "Annotate desktop", or locked in the data folder on Ubuntu.
 
-What leaves the computer:
-- The chat that ran /annotate: frames, notes and recordings stay on the computer until that chat takes them; then its AI reads them like anything else in the chat (for Claude Code, they go to Anthropic with the chat).
-- xAI, or ElevenLabs if picked: the voice, while the mic is on, through Annotate's server, to become text. Never frames, pictures, recordings or typed notes.
-- Annotate, on Send Feedback: the note, the picture if added, and the Annotate and operating system versions. Signed out, feedback is kept on the computer until sign-in.
-- annotate.fly.dev, the service that installs and updates Annotate: gives the computer an install number and sees each update download. When Claude Code opened Annotate, Annotate also sends it a short report per frame sent (how it was made: typed, spoken, drawn or recorded) and per frame done or stuck, with how long it took and a random number that is the same for every report from this computer. Never notes, pictures, recordings, name or email.
-
-Nothing else leaves.
+What leaves the computer (PRIVACY.md has the details):
+- Frames and notes stay on the computer and go only to the agent chat the person picked. Whatever that coding agent sends to its own provider is under that provider's terms.
+- The voice, while the mic is on, goes to xAI (or ElevenLabs, if picked) to become text. Never frames, pictures, recordings or typed notes.
+- Annotate's servers get only counts of frames sent and finished, the sign-in, feedback the person sends, and the crash reports the person agreed to. Never notes, pictures or recordings, except a picture or frame the person adds to feedback.
 
 ## Update and uninstall
 
 Annotate checks for a newer version when a Claude Code session starts. /annotate update gets it now; it asks first, then says when to restart Claude Code.
 
-/annotate uninstall asks "Uninstall Annotate?" (Yes goes on) and then "Also delete your frames and settings?" (No keeps them). It quits Annotate, removes the app and ~/.claude-apps/annotate, deletes the data folder only on the second Yes, and removes annotate@zaydek from Claude Code. If Annotate is still open it removes nothing and says to quit Annotate from its menu first.
+/annotate uninstall asks "Uninstall Annotate?" (Yes goes on) and then "Also delete your frames and settings?" (No keeps them). It quits Annotate, removes the app and the installer's hidden folder (its crash report records stay unless the person also deletes their data), deletes the data folder only on the second Yes, and removes annotate@zaydek from Claude Code. If Annotate is still open it removes nothing and says to quit Annotate from its menu first.
 
 Or paste this into a terminal: curl -fsSL https://annotate.fly.dev/uninstall | sh
 
