@@ -41,23 +41,25 @@ Ask a Claude Code chat where Annotate keeps things, and it lists each place on t
 - **Your frames go to your own Claude Code chat,** over your computer's own loopback address (127.0.0.1). Annotate sends
   them nowhere else. What Claude Code then sends to Anthropic is Claude Code's doing, under
   [Anthropic's terms and privacy policy](https://www.anthropic.com/legal), not Annotate's.
-- **Your voice,** while you use the mic: it streams through Annotate's server at annotate-app.fly.dev to a speech-to-text
-  service, xAI by default or ElevenLabs if you pick it in Settings, and comes back as words. Annotate's server keeps only
-  how many minutes you used. What xAI and ElevenLabs keep is under their own terms.
+- **Your voice,** while you use the mic: Annotate's server at annotate-app.fly.dev sends it to xAI (the default) or
+  ElevenLabs (if you pick it in Settings) to turn it into text, and keeps only how many minutes you used. What xAI and
+  ElevenLabs keep is set by their own terms: [xAI's privacy policy](https://x.ai/legal/privacy-policy) and
+  [ElevenLabs' privacy policy](https://elevenlabs.io/privacy-policy).
 - **Feedback,** only when you press Send in Send Feedback: your note, Annotate's version and your operating system, and,
   if you include them, a picture and your latest frame with its note. It goes to Annotate's server at
   annotate-app.fly.dev, which keeps it, emails a copy to Annotate's maker, and sends a copy under a made-up name
   instead of yours to Annotate's update server (a Fly.io app).
 - **Sign-in:** the installer's sign-in goes through annotate.fly.dev to GitHub or Google. Your account number, name and
-  picture link are kept on Annotate's update server (a Fly.io app), where installs, updates, sign-in and the counts go. Annotate
-  does not ask GitHub or Google for your email there. If you sign in to annotate-app.fly.dev directly, that server keeps your
-  account number and the email address that came with it.
-- **Updates:** Annotate's launcher asks Annotate's update server (a Fly.io app) for the newest version and downloads updates
-  from it. Nothing
-  updates on its own; `annotate update` applies one.
-- **Counts:** while Annotate is open, it sends Annotate's update server (a Fly.io app) one line for each frame you send and each frame a chat
-  finishes or can't do: how the frame was made (typed, spoken, drawn or recorded), how long it took, the version and a
-  random install id. Never your notes, pictures, recordings or name.
+  picture link are kept on Annotate's update server (a Fly.io app), where installs, updates, sign-in and the counts go.
+  Its Google sign-in asks for no email address, and its GitHub sign-in asks only for your public profile. When that
+  sign-in is used on annotate-app.fly.dev, Annotate's own site, the site keeps a GitHub no-reply address made from your
+  username, or no address at all. If you sign in at annotate-app.fly.dev directly, it keeps your account number and the
+  email address that came with it. Annotate never sees or keeps your password.
+- **Updates:** Annotate's launcher asks Annotate's update server (a Fly.io app) for the newest version and downloads
+  updates from it. Nothing updates on its own; `annotate update` applies one.
+- **Counts:** while Annotate is open, it sends Annotate's update server (a Fly.io app) one line for each frame you send
+  and each frame a chat finishes or can't do: how the frame was made (typed, spoken, drawn or recorded), how long it
+  took, the version and a random install id. Never your notes, pictures, recordings or name.
 - **Crash and health reports,** only if you said yes when you installed it, or ran `annotate telemetry on`: they go to
   annotate.fly.dev, which passes them to Annotate's crash-report server, zaydek-telemetry.fly.dev, without your IP
   address. A report holds a random install id, the app version, your operating system and its version, processor type,
@@ -74,8 +76,8 @@ installs from one network a day, as a one-way hash kept two days. It doesn't sav
 
 - **annotate-app.fly.dev:** your account, if you signed in, feedback until it is deleted by hand, and how many voice
   minutes you used.
-- **Annotate's update server (a Fly.io app):** your install's random id, your sign-in, when it was last seen, and the counts above. Annotate
-  has no set time to delete these yet.
+- **Annotate's update server (a Fly.io app):** your install's random id, your sign-in, when it was last seen, and the
+  counts above. Annotate has no set time to delete these yet.
 - **zaydek-telemetry.fly.dev:** each report for 90 days, and records of unexpected stops for a year. Only totals per
   version, with no install id, are kept longer.
 
