@@ -45,6 +45,12 @@ Frame anything on your screen, write a note, and Claude Code does what the note 
 - `/annotate off`: this chat stops getting them.
 - `/annotate help` to learn more.
 
+## Privacy
+
+Annotate keeps your frames and notes on your computer and hands them only to the Claude Code chat you pick. Your voice,
+feedback you send, counts of frames sent and finished, and crash reports if you said yes do leave it, for Annotate's
+servers on Fly.io; [PRIVACY.md](PRIVACY.md) says exactly what each one holds and where it goes.
+
 ## License
 
 These docs are open source under the MIT license (see [LICENSE](LICENSE)). Annotate itself is not open source.
