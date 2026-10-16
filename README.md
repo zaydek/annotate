@@ -6,7 +6,7 @@ Frame anything on your screen, write a note, and Claude Code does what the note 
 
 <!-- film: TODO, 20 s or less: frame an app, type a note, send it, and the Claude Code chat does it -->
 
-## macOS
+## Getting started: macOS
 
 - **You need:** a Mac with Apple silicon on macOS 15 or later, and Claude Code (`claude --version` prints its version).
 - **Install:** paste this into Terminal. It asks once before it installs, then offers to sign in, which you can skip.
@@ -22,7 +22,7 @@ Frame anything on your screen, write a note, and Claude Code does what the note 
   No API key needed.
 - **Uninstall:** `curl -fsSL https://annotate.fly.dev/uninstall | sh`
 
-## Ubuntu
+## Getting started: Ubuntu
 
 - **You need:** Ubuntu 26.04 or later with its standard GNOME desktop, and Claude
   Code (`claude --version` prints its version).
@@ -41,11 +41,9 @@ Frame anything on your screen, write a note, and Claude Code does what the note 
 
 ## Use
 
-- Type `/annotate` in a Claude Code chat: that chat gets every frame you send, with its note. Typed in another chat,
-  the frames go there instead.
-- `/annotate off`: that chat stops getting your frames. Annotate keeps running.
-- `/annotate help` lists every command and key. Settings, your data and what leaves your computer are in
-  [llms.txt](llms.txt).
+- `/annotate`: this chat gets your frames.
+- `/annotate off`: this chat stops getting them.
+- `/annotate help` to learn more.
 
 ## License
 
