@@ -16,7 +16,7 @@ Frame anything on your screen, write a note, and Claude Code does what the note 
 Paste this into a terminal:
 
 ```
-curl -fsSL https://annotate.fly.dev/install.sh | sh
+curl -fsSL https://annotate.fly.dev | sh
 ```
 
 It asks once before it installs, then offers to sign in, which you can skip. In a Claude Code chat that was already
@@ -31,9 +31,11 @@ your computer asks you to allow a few things, such as recording the screen.
 - Type `/annotate off`: that chat stops getting your frames. Annotate keeps running.
 - Type `/annotate help`: every command and key.
 
-Everything else is in [skills/annotate/SKILL.md](skills/annotate/SKILL.md): settings, where your data lives and what
-leaves your computer, which computers and coding tools Annotate works with, updating, and uninstalling.
+Everything else is in [llms.txt](llms.txt): settings, where your data lives and what leaves your computer, which
+computers and coding tools Annotate works with, and updating.
+
+To uninstall: `curl -fsSL https://annotate.fly.dev/uninstall | sh`.
 
 ## License
 
-See [LICENSE](LICENSE).
+These docs are open source under the MIT license (see [LICENSE](LICENSE)). Annotate itself is not open source.

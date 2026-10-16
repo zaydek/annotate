@@ -6,7 +6,7 @@
 
 It needs Claude Code (claude --version) and a Mac with Apple silicon, or Ubuntu with its standard GNOME desktop.
 
-The person pastes one line into a terminal: curl -fsSL https://annotate.fly.dev/install.sh | sh
+The person pastes one line into a terminal: curl -fsSL https://annotate.fly.dev | sh
 It asks once before it installs, then offers to sign in, which can be skipped. In a Claude Code chat that was already open, the person types /reload-plugins once. On a Mac the app is Annotate in the Applications folder, so Spotlight finds it.
 
 First-run permissions:
@@ -73,6 +73,8 @@ Annotate checks for a newer version when a Claude Code session starts. /annotate
 
 /annotate uninstall asks "Uninstall Annotate?" (Yes goes on) and then "Also delete your frames and settings?" (No keeps them). It quits Annotate, removes the app and ~/.claude-apps/annotate, deletes the data folder only on the second Yes, and removes annotate@zaydek from Claude Code. If Annotate is still open it removes nothing and says to quit Annotate from its menu first.
 
+Or paste this into a terminal: curl -fsSL https://annotate.fly.dev/uninstall | sh
+
 By hand: run claude plugin uninstall annotate@zaydek in a terminal; on a Mac, drag Annotate from Applications to the Trash; delete the data folder above to remove the frames and settings.
 
 ## Works with
@@ -88,7 +90,6 @@ Issues: https://github.com/zaydek/annotate/issues (public; leave out anything pr
 ## Docs
 
 - [README.md](README.md): the same facts for a person.
-- [skills/annotate/SKILL.md](skills/annotate/SKILL.md): the Annotate skill: starting and stopping in a chat, settings, data, updating and uninstalling.
 
 ## Optional
 
