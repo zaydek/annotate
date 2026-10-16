@@ -2,16 +2,21 @@
 
 > Annotate is a desktop app, for people who use Claude Code on a Mac or on Ubuntu, that lets a person draw a frame around anything on their screen, type a note, and have the Claude Code chat they picked do what the note asks and say what it did. Never ask for, print or store a token or key.
 
-## Install
+## Install on macOS
 
-It needs Claude Code (claude --version) and a Mac with Apple silicon, or Ubuntu with its standard GNOME desktop.
+It needs a Mac with Apple silicon on macOS 15 or later, and Claude Code (claude --version).
+The person pastes one line into Terminal: curl -fsSL https://annotate.fly.dev | sh
+It asks once before it installs, then offers to sign in, which can be skipped. In a Claude Code chat that was already open, the person types /reload-plugins once. The app is Annotate in the Applications folder, so Spotlight finds it.
+First run: when Annotate opens without a permission it needs, a window walks through each one, Screen Recording and the Microphone, with a button to its page in System Settings > Privacy & Security.
+Keys: ⇧⌘F draws a frame and opens its note card; ⌘↩︎ sends it; ⇧⌘↩︎ records a video of the frame (again to stop); ⇧⌘E shows or hides the inbox; Esc closes the frame without sending.
 
-The person pastes one line into a terminal: curl -fsSL https://annotate.fly.dev | sh
-It asks once before it installs, then offers to sign in, which can be skipped. In a Claude Code chat that was already open, the person types /reload-plugins once. On a Mac the app is Annotate in the Applications folder, so Spotlight finds it.
+## Install on Ubuntu
 
-First-run permissions:
-- macOS: when Annotate opens without a permission it needs, a window walks through each one, Screen Recording and the Microphone, with a button to its page in System Settings.
-- Ubuntu: click Allow when Ubuntu asks to let Annotate take screenshots, click Add to add Annotate's keyboard shortcuts, and on the first recording pick the screen in Share Screen and click Share.
+It needs Ubuntu 26.04 or later with its standard GNOME desktop, and Claude Code (claude --version).
+The person opens a terminal (Ctrl+Alt+T) and pastes one line (Ctrl+Shift+V): curl -fsSL https://annotate.fly.dev | sh
+It asks once before it installs, then offers to sign in, which can be skipped. In a Claude Code chat that was already open, the person types /reload-plugins once.
+First run: click Allow when Ubuntu asks to let Annotate take screenshots, click Add to add Annotate's keyboard shortcuts, and on the first recording pick the screen in Share Screen and click Share.
+Keys: Ctrl+Shift+F draws a frame and opens its note card; Ctrl+Enter sends it; Ctrl+Shift+Enter records a video of the frame (again to stop); Ctrl+Shift+E shows or hides the inbox; Esc closes the frame without sending.
 
 Framing needs no account. The mic and Send Feedback need the person to sign in: they choose Sign in from Annotate's menu and finish in the browser window it opens.
 
@@ -31,13 +36,6 @@ Commands, in the order /annotate help prints them:
 - /annotate help: whether Annotate is open and which chat takes the frames, then every command and key. /annotate help more adds what leaves the computer and how to use other coding tools.
 - /annotate uninstall: removes Annotate once the person says yes. See Update and uninstall.
 From Annotate 1.12.12, a bare /annotate also starts and /annotate off also stops.
-
-Keys, Mac then Ubuntu:
-- ⇧⌘F, Ctrl+Shift+F: draw a frame over the screen, then type a note on its card.
-- ⌘↩︎, Ctrl+Enter: send the frame and its note to the chat.
-- ⇧⌘↩︎, Ctrl+Shift+Enter: record a video of the drawn frame; press again to stop. The person's voice is in the recording unless Include my voice in recordings is off.
-- ⇧⌘E, Ctrl+Shift+E: show or hide the inbox.
-- Esc: close the frame without sending it.
 
 ## Settings
 

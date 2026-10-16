@@ -6,35 +6,46 @@ Frame anything on your screen, write a note, and Claude Code does what the note 
 
 <!-- film: TODO, 20 s or less: frame an app, type a note, send it, and the Claude Code chat does it -->
 
-## What you need
+## macOS
 
-- A Mac with Apple silicon, or Ubuntu with its standard GNOME desktop.
-- Claude Code. In a terminal, `claude --version` prints its version.
+- **You need:** a Mac with Apple silicon on macOS 15 or later, and Claude Code (`claude --version` prints its version).
+- **Install:** paste this into Terminal. It asks once before it installs, then offers to sign in, which you can skip.
 
-## Install
+  ```
+  curl -fsSL https://annotate.fly.dev | sh
+  ```
 
-Paste this into a terminal:
+- **First run:** in a Claude Code chat that was already open, type `/reload-plugins` once. Annotate is in your
+  Applications folder. The first time it opens, a window walks you through allowing Screen Recording and the Microphone.
+  If you said no to one, turn Annotate on in System Settings > Privacy & Security > Screen Recording (or Microphone).
+- **Keys:** ⇧⌘F draws a frame over your screen and opens its note; ⌘↩︎ sends it. ⇧⌘E shows or hides the inbox.
+  No API key needed.
+- **Uninstall:** `curl -fsSL https://annotate.fly.dev/uninstall | sh`
 
-```
-curl -fsSL https://annotate.fly.dev | sh
-```
+## Ubuntu
 
-It asks once before it installs, then offers to sign in, which you can skip. In a Claude Code chat that was already
-open, type `/reload-plugins` once. On a Mac, Annotate goes into your Applications folder. The first time you use it,
-your computer asks you to allow a few things, such as recording the screen.
+- **You need:** Ubuntu 26.04 or later with its standard GNOME desktop, and Claude
+  Code (`claude --version` prints its version).
+- **Install:** paste this into Terminal (Ctrl+Alt+T opens it, Ctrl+Shift+V pastes). It asks once before it installs,
+  then offers to sign in, which you can skip.
+
+  ```
+  curl -fsSL https://annotate.fly.dev | sh
+  ```
+
+- **First run:** in a Claude Code chat that was already open, type `/reload-plugins` once. The first time Annotate
+  opens, Ubuntu asks to let it take screenshots (click Allow) and to add its keyboard shortcuts (click Add).
+- **Keys:** Ctrl+Shift+F draws a frame over your screen and opens its note; Ctrl+Enter sends it. Ctrl+Shift+E shows or
+  hides the inbox. No API key needed.
+- **Uninstall:** `curl -fsSL https://annotate.fly.dev/uninstall | sh`
 
 ## Use
 
 - Type `/annotate` in a Claude Code chat: that chat gets every frame you send, with its note. Typed in another chat,
   the frames go there instead.
-- ⇧⌘F on a Mac, Ctrl+Shift+F on Ubuntu: draw a frame over your screen and type a note. ⌘↩︎ or Ctrl+Enter sends it.
-- Type `/annotate off`: that chat stops getting your frames. Annotate keeps running.
-- Type `/annotate help`: every command and key.
-
-Everything else is in [llms.txt](llms.txt): settings, where your data lives and what leaves your computer, which
-computers and coding tools Annotate works with, and updating.
-
-To uninstall: `curl -fsSL https://annotate.fly.dev/uninstall | sh`.
+- `/annotate off`: that chat stops getting your frames. Annotate keeps running.
+- `/annotate help` lists every command and key. Settings, your data and what leaves your computer are in
+  [llms.txt](llms.txt).
 
 ## License
 
