@@ -30,7 +30,7 @@ It does not read your clipboard or your files.
 | --- | --- | --- |
 | Frames, their pictures, notes and recordings, settings, feedback not yet sent, a record of each mic use (its length, never the words), and its own log | `~/Library/Application Support/Annotate/` | `~/.local/share/annotate/` |
 | Your sign-in to Annotate's server | Your Mac's Keychain, under "Annotate desktop" | `~/.local/share/annotate/account.sealed`, locked with your keyring when you have one |
-| The installer's sign-in, a random install id, and the crash and health reports it sent | `~/.claude-apps/annotate/` | `~/.claude-apps/annotate/` |
+| The installer's sign-in, a random install id, and the crash and health reports it sent | The installer's hidden folder in your home directory | The installer's hidden folder in your home directory |
 | The app's log when Claude Code opened it | (in the folder above) | `~/.cache/annotate-desktop/app.log` |
 | Crash dumps, kept 30 days and never sent | `~/Library/Application Support/Annotate/Crashpad/` | `~/.local/share/annotate/Crashpad/` |
 
@@ -47,14 +47,15 @@ Ask a Claude Code chat where Annotate keeps things, and it lists each place on t
 - **Feedback,** only when you press Send in Send Feedback: your note, Annotate's version and your operating system, and,
   if you include them, a picture and your latest frame with its note. It goes to Annotate's server at
   annotate-app.fly.dev, which keeps it, emails a copy to Annotate's maker, and sends a copy under a made-up name
-  instead of yours to clawed-apps.fly.dev.
+  instead of yours to Annotate's update server (a Fly.io app).
 - **Sign-in:** the installer's sign-in goes through annotate.fly.dev to GitHub or Google. Your account number, name and
-  picture link are kept on the server Annotate's installs and updates come from, clawed-apps.fly.dev. Annotate does not
-  ask GitHub or Google for your email there. If you sign in to annotate-app.fly.dev directly, that server keeps your
+  picture link are kept on Annotate's update server (a Fly.io app), where installs, updates, sign-in and the counts go. Annotate
+  does not ask GitHub or Google for your email there. If you sign in to annotate-app.fly.dev directly, that server keeps your
   account number and the email address that came with it.
-- **Updates:** Annotate's launcher asks clawed-apps.fly.dev for the newest version and downloads updates from it. Nothing
+- **Updates:** Annotate's launcher asks Annotate's update server (a Fly.io app) for the newest version and downloads updates
+  from it. Nothing
   updates on its own; `annotate update` applies one.
-- **Counts:** while Annotate is open, it sends clawed-apps.fly.dev one line for each frame you send and each frame a chat
+- **Counts:** while Annotate is open, it sends Annotate's update server (a Fly.io app) one line for each frame you send and each frame a chat
   finishes or can't do: how the frame was made (typed, spoken, drawn or recorded), how long it took, the version and a
   random install id. Never your notes, pictures, recordings or name.
 - **Crash and health reports,** only if you said yes when you installed it, or ran `annotate telemetry on`: they go to
@@ -73,16 +74,18 @@ installs from one network a day, as a one-way hash kept two days. It doesn't sav
 
 - **annotate-app.fly.dev:** your account, if you signed in, feedback until it is deleted by hand, and how many voice
   minutes you used.
-- **clawed-apps.fly.dev:** your install's random id, your sign-in, when it was last seen, and the counts above. Annotate
+- **Annotate's update server (a Fly.io app):** your install's random id, your sign-in, when it was last seen, and the counts above. Annotate
   has no set time to delete these yet.
 - **zaydek-telemetry.fly.dev:** each report for 90 days, and records of unexpected stops for a year. Only totals per
   version, with no install id, are kept longer.
 
 ## How to delete it
 
-- **Everything on your computer:** `curl -fsSL https://annotate.fly.dev/uninstall | sh -s -- --all`. Without `--all`,
-  your frames and settings stay. On a Mac, the uninstall leaves the "Annotate desktop" sign-in in your Keychain; delete
-  it in Keychain Access.
+- **Everything on your computer:** `annotate uninstall --purge`. It removes the app, its sign-in, your frames and
+  settings, and the installer's hidden folder in your home directory. If a Claude Code chat is still open, one small
+  file saying Annotate was uninstalled may stay in that folder. Without `--purge`, your frames and settings stay, and
+  so does the part of that folder holding the crash and health reports' records. On a Mac, the uninstall leaves the
+  "Annotate desktop" sign-in in your Keychain; delete it in Keychain Access.
 - **Crash and health reports:** `annotate telemetry off`, or set `DO_NOT_TRACK=1`. `annotate telemetry show` lists every
   report this computer sent.
 - **Counts:** there is no switch for these yet. They stop when you quit or uninstall Annotate.
