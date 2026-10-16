@@ -47,9 +47,9 @@ Frame anything on your screen, write a note, and Claude Code does what the note 
 
 ## Privacy
 
-Annotate keeps your frames and notes on your computer and hands them only to the Claude Code chat you pick. Your voice,
-feedback you send, counts of frames sent and finished, and crash reports if you said yes do leave it, for Annotate's
-servers on Fly.io; [PRIVACY.md](PRIVACY.md) says exactly what each one holds and where it goes.
+Your frames and notes stay on your computer and go only to the agent chat you pick. Voice goes to xAI (or ElevenLabs,
+if you choose it) to become text. Annotate's servers get only counts, your sign-in, feedback you send and the crash
+reports you agree to. [PRIVACY.md](PRIVACY.md) has the details.
 
 ## License
 
